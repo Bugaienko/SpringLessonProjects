@@ -8,7 +8,7 @@ public class Client {
     public static void main(String[] args) {
         CameraRoll colorCameraRoll = new ColorCameraRoll();
         CameraRoll blackWhiteCameraRoll = new BlackWhiteCameraRoll();
-        Camera camera = new Camera();
+        CameraImpl camera = new CameraImpl();
 
         camera.setCameraRoll(colorCameraRoll);
         camera.makeImage();
