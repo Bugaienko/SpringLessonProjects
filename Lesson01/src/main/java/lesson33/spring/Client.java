@@ -15,5 +15,11 @@ public class Client {
 
         Camera camera = context.getBean("camera", Camera.class);
         camera.makeImage();
+
+        CameraRoll bwRoll = context.getBean("bwCameraRoll", CameraRoll.class);
+        camera.setCameraRoll(bwRoll);
+        camera.makeImage();
+
+
     }
 }

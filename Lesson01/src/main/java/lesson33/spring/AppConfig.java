@@ -9,17 +9,20 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class AppConfig {
-    @Bean //(name = "cameraRoll")
-    public CameraRoll cameraRoll(){
+    @Bean //(name = "colorCameraRoll")
+    public CameraRoll colorCameraRoll(){
         return new ColorCameraRoll();
     }
 
     @Bean
-    public Camera camera(CameraRoll cameraRoll){
-        Camera camera = new Camera();
-        camera.setCameraRoll(cameraRoll);
-        return camera;
+    public CameraRoll bwCameraRoll() {
+        return new BlackWhiteCameraRoll();
     }
 
-
+    @Bean
+    public Camera camera(CameraRoll colorCameraRoll){
+        Camera camera = new Camera();
+        camera.setCameraRoll(colorCameraRoll);
+        return camera;
+    }
 }
