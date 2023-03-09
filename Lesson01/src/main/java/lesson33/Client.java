@@ -9,7 +9,11 @@ public class Client {
         CameraRoll colorCameraRoll = new ColorCameraRoll();
         CameraRoll blackWhiteCameraRoll = new BlackWhiteCameraRoll();
         Camera camera = new Camera();
+
         camera.setCameraRoll(colorCameraRoll);
+        camera.makeImage();
+
+        camera.setCameraRoll(blackWhiteCameraRoll);
         camera.makeImage();
     }
 }
