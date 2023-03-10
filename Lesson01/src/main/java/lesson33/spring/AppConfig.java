@@ -20,9 +20,9 @@ public class AppConfig {
     }
 
     @Bean
-    public Camera camera(CameraRoll colorCameraRoll){
+    public Camera camera(){
         Camera camera = new Camera();
-        camera.setCameraRoll(colorCameraRoll);
+        camera.setCameraRoll(colorCameraRoll());
         return camera;
     }
 }
