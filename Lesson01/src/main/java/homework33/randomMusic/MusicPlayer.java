@@ -1,6 +1,7 @@
 package homework33.randomMusic;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
+@Scope("prototype")
 public class MusicPlayer {
     @Value("${musicPlayer.name}")
     private String name;
