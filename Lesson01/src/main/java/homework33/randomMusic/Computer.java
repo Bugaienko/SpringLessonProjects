@@ -8,10 +8,11 @@ package homework33.randomMusic;
 public class Computer {
     private int id;
     private MusicPlayer musicPlayer;
+    static int counter = 1;
 
 
     public Computer(MusicPlayer musicPlayer) {
-        this.id = 1;
+        this.id = counter++;
         this.musicPlayer = musicPlayer;
     }
 
